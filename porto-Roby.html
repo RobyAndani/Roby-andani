@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Portofolio 5 Tahun Mendatang</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1000px;
+            background-color: white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .banner {
+            background-color: #070c43;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .main-wrapper {
+            display: flex;
+            flex-direction: row;
+            min-height: 450px; 
+        }
+
+        .sidebar {
+            background-color: #454f8d;
+            width: 30%;
+            padding: 30px 20px;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 15px;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 600;
+            display: block;
+            transition: 0.2s;
+            cursor: pointer;
+        }
+
+        .sidebar ul li a:hover, .sidebar ul li a.active {
+            color: #0e0404;
+            background-color: rgba(170, 170, 243, 0.666);
+            padding-left: 8px;
+            border-radius: 4px;
+        }
+
+        .content {
+            background-color: #1f0546;
+            width: 70%;
+            color: white;
+            padding: 40px;
+            line-height: 1.6;
+        }
+
+        .page-content {
+            display: none;
+        }
+
+        .page-content.active {
+            display: block;
+            animation: fadeIn 0.4s ease-in-out; 
+        }
+
+        .content h2 {
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 5px;
+        }
+
+        .footer {
+            background-color: #1abc9c;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .container { width: 100%; }
+            .main-wrapper { flex-direction: column; }
+            .sidebar, .content { width: 100%; }
+            .main-wrapper { min-height: auto; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="banner">
+            PORTOFOLIO SAYA
+        </div>
+
+        <div class="main-wrapper">
+            
+            <nav class="sidebar">
+                <ul>
+                    <li><a class="menu-link active" onclick="bukaHalaman('profil', this)">• Profil</a></li>
+                    <li><a class="menu-link" onclick="bukaHalaman('pendidikan', this)">• Riwayat Pendidikan</a></li>
+                    <li><a class="menu-link" onclick="bukaHalaman('organisasi', this)">• Riwayat Organisasi</a></li>
+                    <li><a class="menu-link" onclick="bukaHalaman('pekerjaan', this)">• Riwayat Pekerjaan</a></li>
+                    <li><a class="menu-link" onclick="bukaHalaman('karya', this)">• Karya Tulis/Produk</a></li>
+                </ul>
+            </nav>
+
+            <main class="content">
+                
+                <div id="profil" class="page-content active">
+                    <h2>Profil Saya</h2>
+                    <p><strong>Nama:</strong> Roby Andani</p>
+                    <p><strong>Proyeksi 5 Tahun ke Depan:</strong></p>
+                    <p>Saya adalah seorang Information Systems Specialist dan Data Analyst dengan pengalaman lebih dari 3 tahun dalam menjembatani kebutuhan bisnis dengan solusi teknologi. Memiliki latar belakang akademis yang kuat di bidang Sistem Informasi, saya berfokus pada analisis data strategis, pengembangan sistem berbasis web, serta optimalisasi teknologi finansial (Fintech).
+                       Sepanjang karier saya, saya telah berhasil mengonversi data mentah yang kompleks menjadi dasbor analitik yang interaktif, membantu perusahaan mengidentifikasi tren pasar, serta mengoptimalkan strategi digital marketing berbasis performa algoritma. Saya menguasai berbagai instrumen analisis statistik, manajemen basis data, serta implementasi logika pemrograman modern untuk efisiensi bisnis.
+                       Sebagai profesional yang adaptif, saya selalu tertarik pada titik temu antara inovasi teknologi, analisis perilaku pengguna (UI/UX), dan manajemen risiko keuangan. Saya berkomitmen untuk terus menghadirkan solusi digital yang tidak hanya efisien secara teknis, tetapi juga memberikan dampak pertumbuhan bisnis yang nyata.</p>
+                </div>
+
+                <div id="pendidikan" class="page-content">
+                    <h2>Riwayat Pendidikan</h2>
+                    <p>• <strong>2013 - 2019 :</strong>SDN 155 DNS TANTAN</p>
+                    <p>• <strong>2019 - 2022 :</strong>SMP SATU ATAP TANTAN</p>
+                    <p>• <strong>2022 - 2025 :</strong> MAN 2 Muaro Jambi</p>
+                    <p>• <strong>2025 - 2029 :</strong> S1 Sistem Informasi - Universitas Islam Negeri</p>
+                    <p>• <strong>2029 - Sekarang :</strong> Mengambil Sertifikasi Profesional (Google IT Support / AWS Certified / Cisco)</p>
+                </div>
+
+                <div id="organisasi" class="page-content">
+                    <h2>Riwayat Organisasi</h2>
+                    <p>• Anggota Himpunan Mahasiswa Sistem Informasi (HIMASI)</p>
+                    <p>• Komunitas Developer & Open Source lokal</p>
+                    <p>• Anggota Aktif / Divisi Web Development & data</p>
+                </div>
+
+                <div id="pekerjaan" class="page-content">
+                    <h2>Riwayat Pekerjaan</h2>
+                    <p>• <strong>Systems Analyst / IT Consultant</strong> di Perusahaan Teknologi Nasional.</p>
+                    <p>• Mengelola integrasi sistem basis data dan efisiensi alur kerja digital perusahaan.</p>
+                    <p>• Fintech & Financial Market Analysis</p>
+                </div>
+
+                <div id="karya" class="page-content">
+                    <h2>Karya Tulis / Produk Tech</h2>
+                    <p>• Rancang Bangun Aplikasi Web Portofolio Responsif Berbasis Kebutuhan Industri.</p>
+                    <p>• Implementasi Basis Data Terdistribusi untuk UMKM.</p>
+                    <p>• Penerapan Algoritma Machine Learning Untuk Memprediksi Pergerakan Harga Saham</p>
+
+            </main>
+
+        </div>
+
+        <footer class="footer">
+            "Optimizing the system of life, eliminating errors, and scaling up to the next level."
+        </footer>
+
+    </div>
+
+    <script>
+        function bukaHalaman(idHalaman, elemenMenu) {
+
+            let semuaKonten = document.getElementsByClassName("page-content");
+            for (let i = 0; i < semuaKonten.length; i++) {
+                semuaKonten[i].classList.remove("active");
+            }
+
+            let semuaMenu = document.getElementsByClassName("menu-link");
+            for (let i = 0; i < semuaMenu.length; i++) {
+                semuaMenu[i].classList.remove("active");
+            }
+
+            document.getElementById(idHalaman).classList.add("active");
+
+            elemenMenu.classList.add("active");
+        }
+    </script>
+
+</body>
+</html>
